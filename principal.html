@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsividade.css">
+
+    <title>Meu Portifolio</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1 class="Nome__Principal"></h1>
+        </header>
+        <section>
+            <nav class="Buttons">
+                <button><a href="sobremim.html">Sobre Mim</a></button>
+                <button><a href="projetos.html">Projetos</a></button>
+            </nav>
+        </section>
+    </main>
+    <script>
+const texto = 'JOÃO VICTOR';
+const sobrenome = 'IFRAN';
+let i = 0;
+let j = 0;
+const elemento = document.querySelector('.Nome__Principal');
+
+function digitar() {
+    if (i < texto.length) {
+        elemento.innerHTML += texto[i];
+        i++;
+        setTimeout(digitar, 80);
+    } else if (i === texto.length) {
+        elemento.innerHTML += '<br><span class="sobrenome"></span>';
+        digitarSobrenome();
+    }
+}
+
+function digitarSobrenome() {
+    const sobrenomeElemento = document.querySelector('.sobrenome');
+    if (j < sobrenome.length) {
+        sobrenomeElemento.innerHTML += sobrenome[j];
+        j++;
+        setTimeout(digitarSobrenome, 80);
+    }
+}
+
+digitar();
+</script>
+</body>
+
+</html>

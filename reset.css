@@ -1,0 +1,74 @@
+/* Reset CSS completo */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    font-family: inherit;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+    color: inherit;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, main, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    background: transparent;
+}
+
+button, input, select, textarea {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    appearance: none;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+}
+
